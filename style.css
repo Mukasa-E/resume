@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppins', sans-serif ;
+}
+
+body {
+  background-color: dimgrey;
+  color: lemonchiffon;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color:lemonchiffon;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: lemonchiffon;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00eeff;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 70px 10% 0;
+}
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: bold;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.home-content p {
+  font-size: 20px;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content h3 span {
+  color: #00eeff;
+}
+
+.home-content h1 {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 3px 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+.home-img img {
+  max-width: 100%;
+  object-fit: cover;
+  width: 400px;
+  height: auto;
+  border-radius: 40px;
+  margin-right: 15px;
+}
+
+.social-media a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 30px;
+  border: 2px solid #00eeff;
+  color: #00eeff;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+  background: #00eeff;
+  color:dimgrey;
+  box-shadow: 0 0 20px #00eeff;
+}
+
+
+@keyframes slideRight {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Download btn
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00eeff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #00eeff;
+  font-size: 16px;
+  color: dimgrey;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ */
+/*.skills{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 2rem;*/
+/*  background: dimgrey;*/
+/*}*/
+
+/*.education{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 2rem;*/
+/*  background: dimgrey;*/
+/*}*/
+
+/*.projects{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 2rem;*/
+/*  background: dimgrey;*/
+/*}*/
+
+/*.contact{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 2rem;*/
+/*  background: dimgrey;*/
+/*}*/
+/* General styling for sections */
+section {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: dimgrey;
+  color: lemonchiffon;
+}
+
+.container {
+  max-width: 800px;
+}
+
+/* Ensure spacing between sections */
+.skills, .education, .experience, .projects, .contact {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* List styling in projects */
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Links styling */
+a {
+  color: #00eeff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#message-preview {
+  font-style: italic;
+  color: gray;
+  margin-top: 10px;
+}
+
