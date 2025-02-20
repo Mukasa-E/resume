@@ -232,7 +232,7 @@ section {
   max-width: 800px;
 }
 
-/* Ensure spacing between sections */
+/* spacing between sections */
 .skills, .education, .experience, .projects, .contact {
   flex-direction: column;
   gap: 20px;
@@ -264,21 +264,36 @@ a:hover {
   text-decoration: none;
 }
 
+/* Form Styles */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+input,
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#message-preview {
-  font-style: italic;
-  color: gray;
-  margin-top: 10px;
+button {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background: #218838;
 }
 
